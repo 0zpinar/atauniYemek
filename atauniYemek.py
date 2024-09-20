@@ -54,9 +54,6 @@ def useData():
             formData = json.loads(data.read())
         return formData
     else:
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
-        driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
         tc = input("TC Kimlik Numaranız:")
         dogumTarihi = input("Doğum Tarihinizi Giriniz:")
         with open(filePath, "w") as data:
